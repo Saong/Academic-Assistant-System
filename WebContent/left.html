@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	$(".menuson li").click(function(){
+		$(".menuson li.active").removeClass("active")
+		$(this).addClass("active");
+	});
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('ul').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('ul').slideUp();
+		}else{
+			$(this).next('ul').slideDown();
+		}
+	});
+})	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	
+    
+    <dl class="leftmenu">
+        
+
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" /></span>自动排课
+    </div>
+    <ul class="menuson">
+        <li><cite></cite><a href="Ccreatetable.jsp" target="rightFrame">开始排课</a><i></i></li>
+        <li><cite></cite><a href="Cfailcourse.jsp" target="rightFrame">调整课程</a><i></i></li>
+        <li><cite></cite><a href="Ctable.jsp" target="rightFrame">查看课表</a><i></i></li>
+        </ul>     
+    </dd> 
+
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico02.png" /></span>教材/教改/教研管理
+    </div>
+    <ul class="menuson">
+        <li><cite></cite><a href="TApply.jsp" target="rightFrame">填写申请</a><i></i></li>
+        <li><cite></cite><a href="TCreat.jsp" target="rightFrame">待立项审批项目</a><i></i></li>
+        <li><cite></cite><a href="TMid.jsp" target="rightFrame">待中期审批项目</a><i></i></li>
+        <li><cite></cite><a href="TFianl.jsp" target="rightFrame">待最终审批项目</a><i></i></li>
+        <li><cite></cite><a href="TEnd.jsp" target="rightFrame">已结束项目</a><i></i></li>
+        </ul>     
+    </dd> 
+    
+    
+    <dd><div class="title">
+    <span><img src="images/leftico03.png" /></span>SRTP项目管理</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="SNewProject.jsp" target="rightFrame">添加项目</a><i></i></li>
+        <li><cite></cite><a href="SCreatProject.jsp" target="rightFrame">待立项审批项目</a><i></i></li>
+        <li><cite></cite><a href="SMidProject.jsp" target="rightFrame">待中期审批项目</a><i></i></li>
+        <li><cite></cite><a href="SFinalProject.jsp" target="rightFrame">待最终审批项目</a><i></i></li>
+        <li><cite></cite><a href="SEndProject.jsp" target="rightFrame">结束项目</a><i></i></li>
+    </ul>    
+    </dd>  
+    
+    
+    <dd><div class="title"><span><img src="images/leftico04.png" /></span>本科毕业设计管理</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="GYearSetting.jsp" target="rightFrame">设置学年</a><i></i></li>
+        <li><cite></cite><a href="GProjectForm.jsp" target="rightFrame">选题信息</a><i></i></li>
+        <li><cite></cite><a href="GList.jsp" target="rightFrame">项目信息</a><i></i></li>
+    </ul>
+    
+    </dd>   
+    
+    </dl>
+</body>
+</html>
